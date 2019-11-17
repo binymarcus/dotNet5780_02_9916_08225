@@ -27,8 +27,7 @@ namespace dotNet5780_02_9916_08225.Properties
         }
         public override string ToString()
         {
-                Console.WriteLine("Entry Date: {0}.{1}.{2} Release Date: {4} {5}.{6} IsApproved:{7}",EntryDate[0] , EntryDate[1] , EntryDate[2] , ReleaseDate[0] , ReleaseDate[1], ReleaseDate[2], 
-            IsApproved);
+             Console.WriteLine("Entry Date: {0}.{1}.{2} Release Date: {3}.{4}.{5} is approved: {6}",EntryDate[0],EntryDate[1],EntryDate[2],ReleaseDate[0],ReleaseDate[1],ReleaseDate[2],IsApproved);
             return base.ToString();
         }
     }
