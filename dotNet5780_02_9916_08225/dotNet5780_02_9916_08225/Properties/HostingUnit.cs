@@ -18,9 +18,9 @@ namespace dotNet5780_02_9916_08225.Properties
             HostingUnitKey = stSerialKey;
             Diary = diary;
         }
-        public HostingUnit()
+        public HostingUnit()//default constructor sets the entire ,atrix to false
         {
-            HostingUnitKey = stSerialKey;
+            HostingUnitKey = stSerialKey;// sets the host unit to the serial key
             for (int i = 0; i < 12; i++)
             {
                 for (int j = 0; j < 31; j++)
@@ -29,10 +29,10 @@ namespace dotNet5780_02_9916_08225.Properties
                 }
             }
         }
-            public override string ToString()
+            public override string ToString()// override for to string print the serial number then the start and end date of each vacation
         {
             Console.WriteLine("serial number: {0}", HostingUnitKey);
-            ArrayList Date = VacationDates();
+            ArrayList Date = VacationDates();// calculatesd the end dates if each function
             for (int i = 0; i < Date.Count; i+=4)
             { 
                 Console.WriteLine("Start Date: {0}.{1} , End Date:{2}.{3}", (int)Date[i]+1, (int)Date[i + 1]+1, (int)Date[i + 2]+1, (int)Date[i + 3]+1);
@@ -40,7 +40,7 @@ namespace dotNet5780_02_9916_08225.Properties
             }
             return base.ToString();
         }
-        public bool ApproveRequest(GuestRequest guestReq)
+        public bool ApproveRequest(GuestRequest guestReq)//
         {
             int length = 31;
             for (int i = 0; i <= guestReq.ReleaseDate[1] - 1; i++)
