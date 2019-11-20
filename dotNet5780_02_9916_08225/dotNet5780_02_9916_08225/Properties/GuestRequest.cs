@@ -8,7 +8,7 @@ namespace dotNet5780_02_9916_08225.Properties
 {
     class GuestRequest
     {
-        public DateTime EntryDate = new DateTime();
+        public int[] EntryDate = new int[3];
         public int[] ReleaseDate = new int[3];
         public bool IsApproved;
 

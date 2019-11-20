@@ -18,7 +18,7 @@ namespace dotNet5780_02_9916_08225.Properties
             HostingUnitCollection = new List<HostingUnit>(NumberOfUnits);
             for (int i = 0; i < NumberOfUnits; i++)
             {
-                HostingUnitCollection[i] = new HostingUnit();
+                HostingUnitCollection.Add(new HostingUnit());
             }
         }
         public override string ToString()// override for Tostring that prints

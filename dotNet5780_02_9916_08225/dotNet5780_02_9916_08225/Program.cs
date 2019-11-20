@@ -14,7 +14,16 @@ namespace dotNet5780_02_9916_08225
         private static GuestRequest CreateRandomRequest()
         {
             GuestRequest gs = new GuestRequest();
-            //Fill randomally the Entry and Release dates of gs
+            gs.EntryDate[1]=rand.Next(1, 12);
+            gs.EntryDate[0]=rand.Next(1, 31);
+            int stay = rand.Next(2, 10);
+            if (gs.EntryDate[0] + stay > 31)
+            {
+                gs.EntryDate[1]++;
+                gs.EntryDate[0] += stay - 31;
+            }
+            else
+                gs.EntryDate[0] += stay;
             return gs;
         }
         static void Main(string[] args)
@@ -89,10 +98,7 @@ namespace dotNet5780_02_9916_08225
                     }
                 }
             }
-        }
-        private static GuestRequest CreateRandomRequest()
-        {
-
+            Console.Read();
         }
     }
 }
