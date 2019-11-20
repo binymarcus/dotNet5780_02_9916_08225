@@ -56,7 +56,7 @@ namespace dotNet5780_02_9916_08225.Properties
             setVacation(guestReq, length); // sets the vaction dates in the matrix
             return true;
         }
-        public int GetAnnualBusyDays()//returns amount of days occupied
+        public int GetAnnualBusyPrecentege()//returns amount of days occupied
         {
            int count = 0;
             for (int i = 0; i < 12; i++)

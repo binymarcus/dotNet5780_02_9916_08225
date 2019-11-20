@@ -10,7 +10,7 @@ namespace dotNet5780_02_9916_08225.Properties
     class Host:IEnumerable
     {
         public int HostKey;
-        List<HostingUnit> HostingUnitCollection;
+        public List<HostingUnit> HostingUnitCollection;
 
         public Host(int hostKey, int NumberOfUnits)// constructor recieves hostkey and number of units and sets all units to empty
         {
@@ -62,16 +62,19 @@ namespace dotNet5780_02_9916_08225.Properties
             return flag;
         }
 
-        public IEnumerator GetEnumerator()//ask goldshmit
+        public IEnumerator GetEnumerator()// returns our lists enumerator 
         {
-            return MyEnumerator();
-      }
-
-        public int this[int indexer]//help
-        {// what the hell do u want
-      
-          
+            return HostingUnitCollection.GetEnumerator();
         }
 
-            }
+        public HostingUnit this[int indexer]//help
+        {
+            get
+            {
+                if (HostingUnitCollection.Count()>=indexer+1)
+                    return HostingUnitCollection[indexer];
+                else return null;
+             }
+        }
+      }
 }
